@@ -4,13 +4,13 @@ import 'package:permission_handler/permission_handler.dart';
 //Step 1 - Importing Situm
 import 'package:situm_flutter/sdk.dart';
 import 'package:situm_flutter/wayfinding.dart';
+import 'package:majorfluttertest/auth/secrets.dart';
 
 //Step 2 - Setting credentials and building identifier
 //Input here your user credentials ...
-const situmApiKey =
-    "0770de0f168b1be18ec3a053329d82ac51ff5870dcbc300815e1776dedca3702";
+dynamic situmApiKey = '$apiKey';
 // ... and the building you want visualize
-const buildingIdentifier = "14741";
+const buildingIdentifier = "14741"; //your building id
 
 class ShowNav extends StatefulWidget {
   const ShowNav({super.key});
