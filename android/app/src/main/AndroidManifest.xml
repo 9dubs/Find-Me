@@ -1,0 +1,44 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:label="Find Me"
+        
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <meta-data
+              android:name="io.flutter.embedding.android.SplashScreenDrawable" 
+              android:resource="@drawable/launch_background"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+        <meta-data
+           android:name="com.miquido.ar_quido.API_KEY"
+           android:value="6NIGVezBHkn0p0P0i9ZzFuea97C1f+aaTIguLtjgMH7s8DZj2P0hLpexPG3A8j5t3vs7bcThFWvA8jxgg/A6YY+/d2HM4CFp39gwdeT3dzacv3dgxPAwYt72Ji6XyC4uz+Y7aMH2HGjesW9X8L93eszhPG3D5yYul8h3b8L+OHnD+iF1j855Lt3/NHjL/Cdh3rFvV4/kPGLJ/CJ/j793Yczwd1GBsThjyeY5ad6xb1eP4DBi3vZ7RcDyMmn54TRvxvo7a4+/d3/I/SZpg9A5Y9j3B2nO/DJixOc8Y8OxeS7e9jt/yL0Hac78J2jE/TIugbEmacPgMCLi8T9pzucBfszwPmXD9Hcgj+AwYt72e1/Y4TNtzvYBfszwPmXD9Hcgj+AwYt72e1/d8id/yMAlbdn6NGDg8iUugbEmacPgMCLg/CFlwv0BfszwPmXD9Hcgj+AwYt72e0jI/SZp/uM0eMTyOUHM43cgj+AwYt72e0/s1wF+zPA+ZcP0d1GBsTB03fonafn6OGn+5zRh3bFvYtj/OSCP+iZAwvA0YI+pM23B4DBxgeh3btj9MWDI2jF/j6kOLs78OCLI6zRh3f8wIsDyP2Pf9Tl52ecwftn2JniPznku2/InZcz9IX+PqQ4uzvw4Ydj9PHjUsQggj+M5bdn1On7A4Hc29rE0YsnhOmXJsQggj/46aNj/MH+PqQ4u3vY7f8i9HGHM9DBY3/I2Z8T9Mi6BsSZpw+AwIu7/OnnJwTBvwvQ7Zdn6OmKPv3d/yP0maYPBMG/C4TFlw/R3II/gMGLe9ntDz/kwb9nHJ23O+DxiyrF5Lt72O3/IvQZ53/U0b8jHJ23O+DxiyrF5Lt72O3/IvQZ8zOEmaf7jNHjE8jlBzON3II/gMGLe9ntBwuc8Y8PHJ23O+DxiyrF5Lt72O3/IvRFpw+AwX93yIWXM/xht3bF5Lt72O3/IvRZN6ccnbc74PGLKsQggj/YtfMThMFjE/jBf2fI4fI+pO3nB/3kuxOAZY87yOS6X9TRg3vYoINaxN3nD9zlp5PcmLpfIdy7wv3d6zOE8bcPnJi6XyHdvwv44ecP6IXWPznku3f80eMv8J2HesW9Xj/o6f4/OeS7A/DF5wfYmLpfId3/I/SZpg9o4bcr2AX7M8D5lw/R3II/gMGLe9ntPwfwgaP/2NmPK/Tx4xPw7LoGxJmnD4DAi//Y2Y9/3PGLKsXku3vY7f8i9Gm7H9jZ4+eE0b8b6O2uPv3d/yP0maYPAIH7L8jZp+eE0b8b6O2uPv3d/yP0maYPAJW3f4DBf3fIhZcz/GG3dsXku3vY7f8i9GGPZ+jpi+eE0b8b6O2uPv3d/yP0maYPXMGLe9gZ8zOc8bcHeNHyPv3d/yP0maYPQFEj54TRvxvo7a4/OeS7I6yVl3/YBZcD2BnjM/iUul/0gYMG/d2Xe3zpvzP93NsvyOX/I7ghxGvEgxL3MBOJMQM98GFvTtcz9BmPm6zXBwMkRWp0Gr9m5hEISURt6CD8XaJnkdkovrsLB9LWKdLlVy9byb5Csq+0HhlP2Gb3uUNKfUNC1+RqHXeLtdIEaCKvobbLS3iIsp2Yv2uTHanjqFi3vAvMvFeUvwrHyM5qNValh1mEtqsk4Fz+9Soot5zwsE+8j0ZaNq+rhV4nCdWn4IvV6DagUB4L5XFrRu+qJ+QYFqMz3GQgeTarDxUGlgVfksfItcexwP4yfzM3IkJPrxhfXsyqBPe5rfynZFSouIgh7NBvDIfOQbzd+TtzOC5ZB6TQRR9QhDGu9EoHg4+d9zX3XrZNVDA==" />
+    </application>
+</manifest>
